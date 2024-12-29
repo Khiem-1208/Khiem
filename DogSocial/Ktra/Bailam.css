@@ -1,0 +1,81 @@
+/* GLOBAL */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Ubuntu", sans-serif;
+}
+
+h1, h2, h3{
+   font-family: sans-serif;
+   font-weight: 700;
+   line-height: 0.5;
+}
+.colored-section{
+    background-color: #080808 
+    ;
+    color: #080808 
+    ;
+}
+.white-section{
+    background-color: #080808;
+}
+* ==Header== */
+
+
+header{
+    background-color: #ff4c68;
+    color: #fff;
+    overflow: hidden;
+}
+.container-fluid{
+    padding: 3% 15%;
+}
+header .navbar-header{
+    background-color #080808  !important;
+    margin-bottom: 4.5rem
+}
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+.navbar-brand{
+    font-weight: bold;
+    font-size: 2rem;
+    color: #080808;
+}
+.navbar-brand:hover{
+    color: #080808;
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #080808;
+    opacity: 0.5; 
+    margin: 0 15px;
+    text-align: right;
+}
+.nav-link:hover{
+    opacity: 0.8;
+    color: #080808;
+}
+
+
+.navbar-toggler{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.5); */
+}
+.navbar-toggler:focus{
+    box-shadow: 2px 2px 0 0 rgba(255, 255, 255, 0.5);
+}
+.navbar-toggler > i{
+    font-size: 1.5rem;
+    color: #080808;;}
+    
+    
+    

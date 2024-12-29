@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Tin Tức</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tin Tức</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submit-news.html">Gửi tin tức</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nội dung chính -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Bài viết tin tức -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2022/03/02/b/c/6/4/1646192952353_600.jpg" class="card-img-top" alt="Tin tức 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Low G</h5>
+                        <p class="card-text">Dù không tham gia chương trình Rap Việt hay King Of Rap nhưng cái tên Low G vẫn được nhiều người yêu rap biết đến. Tuy còn khá trẻ nhưng anh chàng này đã sở hữu rất nhiều bản rap nổi tiếng được đông đảo cộng đồng fan chú ý. Hãy cùng chúng tôi tìm hiểu Low G là  ai? Tiểu sử, học vấn đáng nể và danh tính bạn gái trong bài viết dưới đây.</p>
+                        <a href="https://tieusu.net/rapper-low-g/" class="btn btn-primary">Đọc thêm</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm các bài viết khác tương tự -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- Thanh điều hướng (giống trang chủ) -->
+    
+     <div class="container mt-4">
+        <h2>Phản hồi</h2>
+        <form>
+            <div class="mb-3">
+                <label for="title" class="form-label">Tiêu đề</label>
+                <input type="text" class="form-control" id="title" required>
+            </div>
+        
+            <div class="mb-3">
+                <label for="content" class="form-label">Nội dung</label>
+                <textarea class="form-control" id="content" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Gửi tin tức</button>
+        </form>
+    </div>
+</body>
+</html>
