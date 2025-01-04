@@ -1,0 +1,265 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #001a1a;
+}
+
+.container-fluid {
+    width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    background-color: #001a1a;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: #000;
+    padding: 0 20px;
+    min-height: 60px;
+    margin-bottom: 0 !important;
+    border-bottom: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c; /* Dark background */
+    color: #fff;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #111; /* Dark header */
+    align-items: center;
+  }
+  
+  header .logo img {
+    height: 50px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 25px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+  }
+  
+  header nav ul li a:hover {
+    color: #90EE90; /* Accent color for hover */
+  }
+  
+
+
+/* Đảm bảo icon trong nav-link cũng đổi màu khi hover */
+.navbar-nav .nav-link:hover i {
+    color: #90EE90;
+}
+
+/* Bỏ hiệu ứng hover cho navbar-brand */
+.navbar-brand:hover {
+    background-color: transparent;
+    color: #00ff00 !important;
+}
+
+.navbar-brand:hover i {
+    color: #00ff00;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 255, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler {
+    border-color: #00ff00 !important;
+}
+
+/* Carousel styling */
+.carousel-inner {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+/* === Tesimonials ===  */
+
+
+/* Style cho phần tin nổi bật */
+.featured-news {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.featured-item {
+    width: 300px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.featured-item:hover {
+    transform: translateY(-5px);
+}
+
+.featured-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featured-item:hover .featured-image img {
+    transform: scale(1.1);
+}
+
+.featured-content {
+    padding: 20px;
+}
+
+.featured-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.featured-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+
+/* Điều chỉnh màu chữ trong news-box để phù hợp với nền tối */
+.news-box {
+    width: 350px;
+    background: rgba(0, 0, 0, 0.7);  /* Màu đen nhạt với độ trong suốt */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.news-content h3 {
+    color: #fff;
+}
+
+.news-content p {
+    color: #ccc;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section styling */
+.section-title {
+    text-align: center;
+    color: #00ff00;
+    margin: 3rem 0;
+    font-size: 2.5rem;
+}
+
+.artist-section,
+.album-section {
+    padding: 2rem 0;
+    background-color: #001a1a;
+}
+
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.circle-item:hover {
+    transform: translateY(-10px);
+}
+
+.circle-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ff00;
+}
+
+.circle-item p {
+    margin-top: 1rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Footer styling */
+.poster {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .btn-register {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .btn-register:hover {
+    background-color: #3e8e41;
+    transform: scale(1.1);
+  }
