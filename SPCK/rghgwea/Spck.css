@@ -32,48 +32,47 @@ body {
     margin-bottom: 0 !important;
     border-bottom: none;
 }
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     background-color: #1c1c1c; /* Dark background */
     color: #fff;
-  }
-  
-  header {
+}
+
+header {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
     background-color: #111; /* Dark header */
     align-items: center;
-  }
-  
-  header .logo img {
+}
+
+header .logo img {
     height: 50px;
-  }
-  
-  header nav ul {
+}
+
+header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-  }
-  
-  header nav ul li {
+}
+
+header nav ul li {
     margin-left: 25px;
-  }
-  
-  header nav ul li a {
+}
+
+header nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 1em;
-  }
-  
-  header nav ul li a:hover {
-    color: #90EE90; /* Accent color for hover */
-  }
-  
+}
 
+header nav ul li a:hover {
+    color: #90EE90; /* Accent color for hover */
+}
 
 /* Đảm bảo icon trong nav-link cũng đổi màu khi hover */
 .navbar-nav .nav-link:hover i {
@@ -100,19 +99,28 @@ body {
 
 /* Carousel styling */
 .carousel-inner {
-    height: 100vh;
+    height: 80vh;
     min-height: 300px;
     background: no-repeat center center scroll;
     background-size: cover;
+    position: relative; /* Add this */
 }
 
 .carousel-caption {
-    bottom: 50%;
-    transform: translateY(50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    position:absolute;
+     /* Add this */
+   
+    
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position */
+    z-index: 10; /* Ensure it appears above the carousel item */
 }
 
 /* === Tesimonials ===  */
-
 
 /* Style cho phần tin nổi bật */
 .featured-news {
@@ -169,7 +177,6 @@ body {
     font-size: 0.9rem;
     line-height: 1.4;
 }
-
 
 /* Điều chỉnh màu chữ trong news-box để phù hợp với nền tối */
 .news-box {
@@ -245,9 +252,9 @@ html {
 .poster {
     text-align: center;
     padding: 20px;
-  }
-  
-  .btn-register {
+}
+
+.btn-register {
     background-color: #4CAF50;
     color: white;
     padding: 15px 32px;
@@ -257,9 +264,58 @@ html {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
-  
-  .btn-register:hover {
+}
+
+.btn-register:hover {
     background-color: #3e8e41;
     transform: scale(1.1);
-  }
+}
+.promotion {
+    margin-top: 50px;
+    background-color: #001a1a;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #3e8e41;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.promotion img {
+    max-width: 200px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.promotion-content {
+    flex: 1;
+}
+
+.promotion-content h2 {
+    color: #00ff00;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.promotion-content p {
+    margin-bottom: 10px;
+}
+
+.cta {
+    margin-top: 10px;
+}
+
+.cta a {
+    background-color: #00ff00;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #00335a;
+}
