@@ -1,0 +1,419 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #001a1a;
+    
+}
+
+
+
+.container-fluid {
+    width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    background-color: #001a1a;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: #000;
+    padding: 0 20px;
+    min-height: 50px;
+    margin-bottom: 0 !important;
+    border-bottom: none;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #111; /* Dark header */
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+header nav ul li a:hover {
+    color: #90EE90; /* Accent color for hover */
+}
+
+/* Đảm bảo icon trong nav-link cũng đổi màu khi hover */
+.navbar-nav .nav-link:hover i {
+    color: #90EE90;
+}
+
+/* Bỏ hiệu ứng hover cho navbar-brand */
+.navbar-brand:hover {
+    background-color: transparent;
+    color: #00ff00 !important;
+}
+
+.navbar-brand:hover i {
+    color: #00ff00;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 255, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler {
+    border-color: #00ff00 !important;
+}
+
+/* Carousel styling */
+.carousel-inner {
+    height: 80vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+    position: relative; /* Add this */
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    top: 50%;
+}
+
+
+
+
+/* === Tesimonials ===  */
+.id{
+    margin-top: 1rem;
+    margin-bottom: 0rem;  /* Add space after testimonial */
+    position: relative;
+    padding: 5px 0;
+    background: #001a1a;
+    color: #00ff00;
+    left: 30px;
+}
+/* Style cho phần tin nổi bật */
+.featured-news {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.featured-item {
+    width: 300px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.featured-item:hover {
+    transform: translateY(-5px);
+}
+
+.featured-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featured-item:hover .featured-image img {
+    transform: scale(1.1);
+}
+
+.featured-content {
+    padding: 20px;
+}
+
+.featured-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.featured-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Điều chỉnh màu chữ trong news-box để phù hợp với nền tối */
+.news-box {
+    width: 350px;
+    background: rgba(0, 0, 0, 0.7);  /* Màu đen nhạt với độ trong suốt */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.news-content h3 {
+    color: #fff;
+}
+
+.news-content p {
+    color: #ccc;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section styling */
+.section-title {
+    text-align: center;
+    color: #00ff00;
+    margin: 3rem 0;
+    font-size: 2.5rem;
+}
+
+.artist-section,
+.album-section {
+    padding: 3em 0;
+    background-color: #001a1a;
+}
+
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.circle-item:hover {
+    transform: translateY(-10px);
+}
+
+.circle-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ff00;
+}
+
+.circle-item p {
+    margin-top: 1rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Footer styling */
+.poster {
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-register {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    background-color: #3e8e41;
+    transform: scale(1.1);
+}
+.promotion {
+    margin-top: 50px;
+    background-color: #001a1a;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #3e8e41;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.promotion img {
+    max-width: 200px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.promotion-content {
+    flex: 1;
+}
+
+.promotion-content h2 {
+    color: #00ff00;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.promotion-content p {
+    margin-bottom: 10px;
+}
+
+.cta {
+    margin-top: 10px;
+}
+
+.promotion-content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.promotion-content a:hover {
+    color: #3e8e41;
+}
+.cta {
+    margin-top: 10px;
+}
+
+.cta a {
+    background-color: #00ff00;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #00335a;
+}
+
+
+
+
+
+/* Media queries */
+
+.container1 {
+    display: flex; /* Kích hoạt Flexbox */
+    flex-direction: row; /* Sắp xếp theo hàng ngang */
+    justify-content: space-around; /* Khoảng cách giữa các card */
+    align-items: center; /* Căn chỉnh theo chiều dọc */
+    gap: 0px; /* Khoảng cách giữa các card */
+}
+
+.body{
+    background-color: #121212;
+    color: #121212;
+
+}
+
+.card {
+    background: #181818;
+    border-radius: 10px;
+
+    margin: 50px;
+    display: flex;
+    width: 280px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 280px;
+    height: 270px;
+    display: block;
+}
+
+.card .content {
+    padding: 15px;
+}
+
+.card .content h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.card .content p {
+    font-size: 0.9em;
+    color: #000
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1db954;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .play-button {
+    opacity: 1;
+}
+.id1 {
+    margin-top: 1rem;
+    margin-bottom: 0rem;  /* Add space after testimonial */
+    position: relative;
+    padding: 5px 0;
+    background: #001a1a;
+    color: #00ff00;
+    left: 30px;
+}
