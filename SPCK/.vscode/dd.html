@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang web chia sẻ thông tin dự án bất động sản">
+    <title>Trang Dự Án 24h</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #005bb5;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            margin: 0 0 10px;
+            color: #0073e6;
+        }
+        .card-content p {
+            margin: 0 0 10px;
+        }
+        .cta {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .cta a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background: #0073e6;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .cta a:hover {
+            background: #005bb5;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trang Dự Án 24h</h1>
+    </header>
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Dự án</a>
+        <a href="#">Tin tức</a>
+        <a href="#">Liên hệ</a>
+        <a href="#">Giới thiệu</a>
+    </nav>
+    <div class="hero">
+        <h2>Khám phá các dự án bất động sản hàng đầu</h2>
+        <p>Tìm hiểu thông tin chi tiết và cơ hội đầu tư hấp dẫn</p>
+    </div>
+    <div class="container">
+        <h2>Dự án nổi bật</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/800x400" alt="Dự án A">
+                <div class="card-content">
+                    <h3>Dự án A</h3>
+                    <p>Mô tả ngắn gọn về dự án A. Đây là một dự án bất động sản nổi bật tại khu vực trung tâm.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/800x400" alt="Dự án B">
+                <div class="card-content">
+                    <h3>Dự án B</h3>
+                    <p>Mô tả ngắn gọn về dự án B. Cung cấp thông tin hữu ích cho nhà đầu tư.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/800x400" alt="Dự án C">
+                <div class="card-content">
+                    <h3>Dự án C</h3>
+                    <p>Mô tả ngắn gọn về dự án C. Dự án tiềm năng với nhiều tiện ích hiện đại.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cta">
+            <a href="#">Xem thêm dự án</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Trang Dự Án 24h. Bản quyền thuộc về nhóm phát triển.</p>
+        <p><a href="#">Chính sách bảo mật</a> | <a href="#">Điều khoản sử dụng</a></p>
+    </footer>
+</body>
+</html>

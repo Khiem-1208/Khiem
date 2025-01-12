@@ -1,74 +1,84 @@
-body {
+.body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 .login-container {
-    background-color: #fff;
+    background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
     text-align: center;
-}
-
-.login-container h1 {
+    color: #1db954;
     margin-bottom: 20px;
-    color: #333;
 }
 
-.login-container label {
-    display: block;
-    margin-bottom: 5px;
-    color: #666;
-    text-align: left;
+.login-form {
+    display: flex;
+    flex-direction: column;
 }
 
-.login-container input {
-    width: 100%;
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    margin-top: 5px;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.login-container button:hover {
-    background-color: #0056b3;
-}
-
-.error-message {
-    color: red;
-    display: none;
+.remember-me {
+    display: flex;
+    align-items: center;
     margin-top: 10px;
 }
 
-button {
-    margin: 10px 0;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.remember-me input {
+    margin-right: 10px;
 }
 
-button:hover {
-    background-color: #45a049;
+.login-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background-color: #14833b;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #1db954;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
 }

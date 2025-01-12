@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel with Captions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 700px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%;
+        }
+
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .caption {
+            padding: 10px;
+            background-color: #fff;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        .control:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="slides" id="slides">
+            <div class="slide">
+                <img src="https://via.placeholder.com/700x400/FF5733/FFFFFF?text=Slide+1" alt="Slide 1">
+                <div class="caption">This is the first slide description.</div>
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/700x400/33FF57/FFFFFF?text=Slide+2" alt="Slide 2">
+                <div class="caption">This is the second slide description.</div>
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/700x400/3357FF/FFFFFF?text=Slide+3" alt="Slide 3">
+                <div class="caption">This is the third slide description.</div>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="control" id="prev">&#8249;</button>
+            <button class="control" id="next">&#8250;</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const offset = -index * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        document.getElementById('next').addEventListener('click', nextSlide);
+        document.getElementById('prev').addEventListener('click', prevSlide);
+
+        // Auto-slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
