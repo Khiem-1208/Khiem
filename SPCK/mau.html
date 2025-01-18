@@ -3,190 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPCK Gia Khiêm</title>
+    <title>Album Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
 
-    <!-- link css -->
-    <link rel="stylesheet" href="/css/style.css">
+        .album-container {
+            display: flex;
+            gap: 20px;
+        }
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Bootstrap CSS  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+        .album {
+            background-color: #181818;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 180px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+        }
 
+        .album:hover {
+            transform: scale(1.05);
+        }
+
+        .album img {
+            width: 100%;
+            display: block;
+        }
+
+        .album-title {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .play-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #1db954;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background-color: #1ed760;
+        }
+
+        .play-button svg {
+            fill: white;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
-    
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1<div class="container-fluid">
-        <!-- Navbar đặt trước slider -->
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-music"></i>
-                Famousy
-
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+    <div class="album-container">
+        <div class="album">
+            <img src="https://via.placeholder.com/180" alt="Album Cover">
+            <div class="album-title">Album 1</div>
+            <button class="play-button" onclick="playMusic('song1.mp3')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Center navigation items -->
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#story"><i class="fas fa-fire"></i> Tin Nổi Bật</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#artists"><i class="fas fa-user"></i> Nghệ Sĩ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#albums"><i class="fas fa-compact-disc"></i> Albums</a>
-                    </li>
-                </ul>
-                <!-- Move login and register links to the left --:5501/html/dangnhap.html"><i class="fas fa-sign-in-alt"></i> Đăng Nhập
-                </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:5501/html/dangnhap.html"><i class="fas fa-user-plus"></i> Đăng Ký</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-            
-    <!-- Testimonial  -->
-    <section class="testimonial colored-section">
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active container-fluid">
-                    <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on DogSocial. Woof.</h2>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/TLINH_%E2%80%93_CF%26Y_2023_%E2%80%93_OFFICIAL_PORTRAIT_PHOTO.png" alt="rapper-profile">
-                    <em>TLinh, Rapper</em>
-                </div>
-                <div class="carousel-item container-fluid">
-                    <h2>My dog used to be so lonely, but with DogSocial's help, they've found the love of their life. I think.</h2>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/MCK_2023_Hanoi_%28cropped%29.jpg/640px-MCK_2023_Hanoi_%28cropped%29.jpg" alt="rapper-profile">
-                    <em>MCK, Rapper</em>
-                </div>
-                <div class="carousel-item container-fluid">
-                    <h2>My dog used to be so lonely, but with DogSocial's help, they've found the love of their life. I think.</h2>
-                    <img src="https://media.viez.vn/prod/2023/6/16/large_image_2005cdf78b.png" alt="rapper-profile">
-                    <em>Wxrdie, Rapper</em>
-                </div>
-                <div class="carousel-item container-fluid">
-                    <h2>My dog used to be so lonely, but with DogSocial's help, they've found the love of their life. I think.</h2>
-                    <img src="https://kenh14cdn.com/203336854389633024/2021/1/9/artboard-1-copy-10-16101255002561934665452.jpg" alt="rapperrapper-profile">
-                    >
-                    <em>Low G, Rapper</em>
-                </div>
-                <div class="carousel-item container-fluid">
-                    <h2>My dog used to be so lonely, but with DogSocial's help, they've found the love of their life. I think.</h2>
-                    <img src="https://hosonhanvat.net/wp-content/uploads/2021/06/obito1-1.jpg" alt="rapperrapper-profile">
-                    >
-                    <em>Obito, Rapper</em>
-                </div>
-                <div class="carousel-item container-fluid">
-                    <h2>My dog used to be so lonely, but with DogSocial's help, they've found the love of their life. I think.</h2>
-                    <img src="https://i.scdn.co/image/ab6761610000e5eb00309536fc73ca57f6003605" alt="rapperrapper-profile">
-                    >
-                    <em>Dangrangto, Rapper</em>
-                </div>
-                
-    
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            
         </div>
-    </section>
 
-            <!-- Thêm section cho 3 khung tin nổi bật -->
-            <div id = "story" class="featured-news">
-                <div class="featured-item">
-                    <div class="featured-image">
-                        <a href="#hot-news">
-                            <img src="https://images.spiderum.com/sp-images/5fea3b60336e11ef8edc8fe0c5fa8e33.png" alt="Tin nổi bật 1">
-                        </a>
-                    </div>
-                    <div class="featured-content">
-                        <h3>Tin nổi bật 1</h3>
-                        <p>Mô tả ngắn về tin tức 1</p>
-                    </div>
-                </div>
+        <div class="album">
+            <img src="https://via.placeholder.com/180" alt="Album Cover">
+            <div class="album-title">Album 2</div>
+            <button class="play-button" onclick="playMusic('song2.mp3')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+        </div>
 
-                <div class="featured-item">
-                    <div class="featured-image">
-                        <a href="#hot-news">
-                            <img src="https://static.wikia.nocookie.net/producerviet/images/2/28/Low_G.jpeg" alt="Tin nổi bật 2">
-                        </a>
-                    </div>
-                    <div class="featured-content">
-                        <h3>Tin nổi bật 2</h3>
-                        <p>Mô tả ngắn về tin tức 2</p>
-                    </div>
-                </div>
+        <div class="album">
+            <img src="https://media.viez.vn/prod/2022/4/21/low_g_8edf53f982.png" alt="Album Cover">
+            <div class="album-title">Album 3</div>
+            <button class="play-button" onclick="playMusic('song3.mp3')">
+                <svg src="./MCK/Badtrip.mp3" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+        </div>
+    </div>
 
-                <div class="featured-item">
-                    <div class="featured-image">
-                        <a href="#hot-news">
-                            <img src="path_to_your_image3.jpg" alt="Tin nổi bật 3">
-                        </a>
-                    </div>
-                    <div class="featured-content">
-                        <h3>Tin nổi bật 3</h3>
-                        <p>Mô tả ngắn về tin tức 3</p>
-                    </div>
-              
-                    
-     
-            </div>
+    <audio id="audio-player" controls style="display: none;"></audio>
 
-            <!-- Artists Section -->
-            <section id="artists" class="artist-section">
-                <h2 class="section-title">Nghệ Sĩ Nổi Bật</h2>
-                <div class="circle-container">
-                    <div class="circle-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/TLINH_%E2%80%93_CF%26Y_2023_%E2%80%93_OFFICIAL_PORTRAIT_PHOTO.png" alt="Artist 1">
-                        <p>TLinh</p>
-                    </div>
-                    <div class="circle-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/MCK_2023_Hanoi_%28cropped%29.jpg/640px-MCK_2023_Hanoi_%28cropped%29.jpg" alt="Artist 2">
-                        <p>MCK</p>
-                    </div>
-                    <!-- Add more circle-items as needed -->
-                </div>
-            </section>
-
-            <!-- Albums Section -->
-            <section id="albums" class="album-section">
-                <h2 class="section-title">Album Nổi Bật</h2>
-                <div class="circle-container">
-                    <div class="circle-item">
-                        <img src="path_to_album1.jpg" alt="Album 1">
-                        <p>Album Name 1</p>
-                    </div>
-                    <div class="circle-item">
-                        <img src="path_to_album2.jpg" alt="Album 2">
-                        <p>Album Name 2</p>
-                    </div>
-                    <!-- Add more circle-items as needed -->
-                </div>
-            </section>
-        </div> <!-- Kết thúc container-fluid -->
-
-        <!-- JS Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-    </body>
+    <script>
+        function playMusic(src) {
+            const audioPlayer = document.getElementById('audio-player');
+            audioPlayer.src = src;
+            audioPlayer.play();
+        }
+    </script>
+</body>
 </html>
