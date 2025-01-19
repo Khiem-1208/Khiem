@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 
 .body {
@@ -160,6 +165,7 @@ header nav ul li a:hover {
     max-width: 100%;
     object-fit: cover;
     height: 100%;
+    border-radius: 10px;
 }
 
 @keyframes carousel-animate {
@@ -445,6 +451,9 @@ footer {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+  
+    width: 100%;
+  
 
 }
 
